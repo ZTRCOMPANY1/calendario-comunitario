@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    padding: 20px;
+    color: #333;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Container de eventos */
+#listaEventos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartão dos eventos */
+.evento-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    width: 280px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.3s;
+    cursor: grab;
+    border: none;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.evento-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.evento-card h3 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.evento-card p {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Dragging efeito */
+.evento-card.dragElem {
+    opacity: 0.5;
+}
+
+.evento-card.over {
+    border: 2px dashed #3498db;
+    background-color: #ecf9ff;
+}
+
+/* Botões */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #217dbb;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Inputs e formulário */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Formulário */
+#formEvento {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+#formEvento h2 {
+    margin-bottom: 16px;
+    color: #2c3e50;
+}
+
+label {
+    font-weight: 500;
+}
+
+/* Botão de salvar ordem */
+#salvarOrdem {
+    display: block;
+    margin: 20px auto;
+    background-color: #27ae60;
+}
+
+#salvarOrdem:hover {
+    background-color: #1e8449;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .evento-card {
+        width: 100%;
+    }
+    #listaEventos {
+        justify-content: center;
+    }
+}
+

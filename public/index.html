@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+    <h1>Painel de Eventos</h1>
+
+    <h2>Adicionar Evento</h2>
+    <form id="formEvento" enctype="multipart/form-data">
+        <input type="text" name="titulo" placeholder="Título" required><br>
+        <textarea name="descricao" placeholder="Descrição" required></textarea><br>
+        <input type="date" name="data" required><br>
+        <input type="text" name="categoria" placeholder="Categoria" required><br>
+        <input type="text" name="local" placeholder="Local" required><br>
+        <input type="file" name="imagem" accept="image/*"><br>
+        <button type="submit">Adicionar Evento</button>
+    </form>
+
+    <h2>Gerenciar Ordem dos Eventos</h2>
+    <button id="salvarOrdem">Salvar Ordem</button>
+    <div id="listaEventos"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
